@@ -1,10 +1,9 @@
-arr=[1,2,3];
-[1,2,3].map(function square(elem)
-{
-    return elem*elem;
-});
-
-[1,4,9].reduce(function(pre,curr,index,array)
-               {
-                           return pre+curr;
-               },0);
+function sum_sq(array) {
+    var sum = 0, 
+        i = array.length;
+    while (i--) 
+     sum += Math.pow(array[i], 2);
+    return sum;
+  }
+   
+  console.log(sum_sq([0,1,2,3,4]));
