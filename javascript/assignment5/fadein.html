@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>SLIDESHOW</title>
+<script>
+
+window.onload = function() {
+    var image=document.getElementById("aaa");
+    var img_array=["hyacinth.jpg","daisy.jpg","lotus.jpg" ];
+    var i=0;
+    var interval = 3000;
+    function slide() {
+        document.getElementById('aaa').className += "fadeOut";
+    
+    setInterval(function() {
+        document.getElementById('aaa').src = img_array[i];
+        document.getElementById('aaa').className = "";
+    },1000);
+    i++;
+    if (i == img_array.length) { i = 0; }
+   
+    setInterval(slide, interval);
+}
+slide();
+}
+
+</script>
+<style>
+    #aaa {
+    opacity:1;
+    transition: opacity 1000; 
+}
+
+#aaa.fadeOut {
+    opacity:0;
+}
+</style>
+</head>
+<body>
+    <h1 align = "center"> FLOWERS </h1>
+    <img style = "  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;" id="aaa" src="hyacinth.jpg" width="700" height="700" name="image" />
+    </body>
+</html>
