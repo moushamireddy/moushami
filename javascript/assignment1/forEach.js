@@ -6,4 +6,4 @@
 		sum += x;
 	});
 
-	document.write("Sum is " + sum);
+	console.log("Sum is " + sum);
