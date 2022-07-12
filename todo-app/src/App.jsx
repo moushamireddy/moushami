@@ -16,8 +16,15 @@ setInputList(event.target.value);
         });
         setInputList(" ");
     };
-    const deleteItems = () => {
+    const deleteItems = (id) => {
         console.log("deleted");
+
+        setItems((oldItems) => {
+            return oldItems.filter((arrElem, index) => {
+                return index !== id;
+
+            });
+        })
     };
 
 return (
